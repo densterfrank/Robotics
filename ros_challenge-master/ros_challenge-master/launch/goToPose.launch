@@ -1,0 +1,6 @@
+<launch>
+
+    <node name="gotopose" pkg="ros_challenge" type="goToPose.py" output="screen">
+    </node>
+
+</launch>

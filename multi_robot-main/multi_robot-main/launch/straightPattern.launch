@@ -1,0 +1,4 @@
+<launch>
+  <!-- Launch straight pattern -->
+  <node name="straightPattern" pkg="multi_robot" type="straightPattern.py" output="screen" />
+</launch>

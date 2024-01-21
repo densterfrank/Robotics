@@ -1,0 +1,11 @@
+<launch>
+    <node name="detection" pkg="ros_challenge" type="detection.py" output="screen" >
+    </node>
+    <arg name="teach" default="false"/>
+    <arg name="recognize" default="true"/>
+    <node pkg="find_object_2d" type="find_object_2d" name="find_object_2d">
+        <remap from="image" to="/camera/rgb/image_raw"/>
+        <param name="gui" value="$(arg teach)"/>
+        <param if="$(arg recognize)" name="objects_path" value="$(find ros_challenge)/images/"/>
+    </node>
+</launch>

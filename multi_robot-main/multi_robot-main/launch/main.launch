@@ -1,0 +1,11 @@
+<launch>
+  
+    <!-- Launch Hardware -->
+    <include file="$(find aiil_rosbot_demo)/launch/rosbot_pro.launch" />
+
+    <!-- Launch Mapping & Navigation-->
+    <include file="$(find multi_robot)/launch/navigation.launch" />
+
+  <node pkg ="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop_twist_keyboard" output="screen"/>
+
+</launch>

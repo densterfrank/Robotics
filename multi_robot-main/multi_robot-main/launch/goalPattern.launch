@@ -1,0 +1,6 @@
+<launch>
+<!-- Launch goalPattern -->
+    <node name="gotopose" pkg="multi_robot" type="goalPattern.py" output="screen">
+    </node>
+
+</launch>

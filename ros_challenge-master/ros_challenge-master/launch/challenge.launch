@@ -1,0 +1,5 @@
+<launch>
+    <!-- Launch Mapping & Navigation-->
+    <include file="$(find ros_challenge)/launch/detection.launch" />
+    <include file="$(find ros_challenge)/launch/navigate.launch" />
+</launch>

@@ -1,0 +1,33 @@
+<launch>
+    <node name="navigate" pkg="ros_challenge" type="navigate2.py" output="screen" >
+    </node>
+
+    
+
+     <!-- Move Base 
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base1" output="screen">
+      <rosparam file="$(find ros_challenge)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+      <rosparam file="$(find ros_challenge)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+      <rosparam file="$(find ros_challenge)/config/local_costmap_params.yaml" command="load" />
+      <rosparam file="$(find ros_challenge)/config/global_costmap_params.yaml" command="load" />
+      <rosparam file="$(find ros_challenge)/config/trajectory_planner.yaml" command="load" />
+      
+    </node>-->
+
+    <!-- Explore Lite 
+  <node pkg="explore_lite" type="explore" respawn="false" name="explore" output="screen">
+  <param name="robot_base_frame" value="base_link"/>
+  <param name="costmap_topic" value="map"/>
+  <param name="costmap_updates_topic" value="map_updates"/>
+  <param name="visualize" value="true"/>
+  <param name="planner_frequency" value="0.33"/>
+  <param name="progress_timeout" value="30.0"/>
+  <param name="potential_scale" value="3.0"/>
+  <param name="orientation_scale" value="0.0"/>
+  <param name="gain_scale" value="1.0"/>
+  <param name="transform_tolerance" value="0.3"/>
+  <param name="min_frontier_size" value="0.75"/>
+  <remap from="/move_base/goal" to="/challenge/goal"/>
+</node>-->
+
+</launch>
